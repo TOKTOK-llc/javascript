@@ -1,3 +1,5 @@
+import { buildErrorThrower } from '@clerk/shared';
+
 /**
  * Generic exports
  */
@@ -49,3 +51,5 @@ export type {
  */
 export { authMiddleware } from './authMiddleware';
 export { redirectToSignIn, redirectToSignUp } from './redirectHelpers';
+
+export const errorThrower = buildErrorThrower({ packageName: '@clerk/nextjs' });
